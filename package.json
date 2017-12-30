@@ -1,0 +1,22 @@
+{
+  "name": "ornate",
+  "version": "1.0.0",
+  "description": "protractor automation framework",
+  "main": "conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CT",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^2.8.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "nodemailer": "^4.4.1",
+    "protractor": "^5.2.2",
+    "protractor-custom-locators": "^3.0.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0",
+    "selenium-webdriver": "^3.6.0",
+    "webdriver-js-extender": "^1.0.0",
+    "webdriver-manager": "^12.0.6"
+  }
+}
