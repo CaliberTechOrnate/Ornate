@@ -32,22 +32,17 @@ exports.config = {
         'browserName': 'firefox'
     }],
 
-    seleniumAddress: 'http://192.168.99.100:32798/wd/hub',
-    allScriptsTimeout: 50000,
+    //seleniumAddress: 'http://192.168.99.100:32798/wd/hub',
+    //allScriptsTimeout: 50000,
 
     framework: 'jasmine2',
-        suites: {
-
-            smoke: ['./smoke/!*.spec.js'],
-            regression: ['./regression/!*.spec.js'],
-            functional: ['./functional/!*.spec.js'],
-            all: ['./!*!/!*.spec.js'],
-    },
-
-    // Options to be passed to Jasmine.
-    jasmineNodeOpts: {
-        defaultTimeoutInterval: 30000
-    },
+    //suites: {
+//
+//            smoke: ['./smoke/!*.spec.js'],
+//            regression: ['./regression/!*.spec.js'],
+//            functional: ['./functional/!*.spec.js'],
+//            all: ['./!*!/!*.spec.js'],
+//    },
 
     onPrepare: function () {
 
