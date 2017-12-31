@@ -3,18 +3,18 @@
     console.log('If at times there is some issue in report deployment or reports are not available on mentioned port, please restart jenkins master and re run the test build');
 
     var exec = require('child_process').exec;
-
-    function puts(error, stdout, stderr) {
-        sys.puts(stdout)
-    }
-   /* exec("mvn site -Dallure.results_pattern=allure-results && mvn jetty:run -Djetty.port=1234", puts);
+exec("mvn site -Dallure.results_pattern=allure-results && mvn jetty:run -Djetty.port=1234", puts);
     var startTimes = Date.now();
     while (Date.now() - startTimes < 60000) {
     }
 }
 
 function send_mail() {
-    console.log("Sending Mail with reports for the test execution.");
+    console.log("Sending Mail with reports for t
+    function puts(error, stdout, stderr) {
+        sys.puts(stdout)
+    }
+   /* he test execution.");
     var sys = require('util')
     var exec = require('allure-results').exec;
 
@@ -32,17 +32,17 @@ exports.config = {
         'browserName': 'firefox'
     }],
 
-    //seleniumAddress: 'http://192.168.99.100:32798/wd/hub',
-    //allScriptsTimeout: 50000,
+    allScriptsTimeout: 50000,
 
     framework: 'jasmine2',
-    //suites: {
-//
-//            smoke: ['./smoke/!*.spec.js'],
-//            regression: ['./regression/!*.spec.js'],
-//            functional: ['./functional/!*.spec.js'],
-//            all: ['./!*!/!*.spec.js'],
-//    },
+        suites: {
+            all: ['./test_spec/BankManagerLoginTest.js','./test_spec/AddCustomerInfoTest.js'],
+    },
+
+    // Options to be passed to Jasmine.
+    jasmineNodeOpts: {
+        defaultTimeoutInterval: 30000
+    },
 
     onPrepare: function () {
 
