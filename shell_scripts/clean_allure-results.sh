@@ -6,6 +6,7 @@ echo "deleting files in allure-results"
 
 for FILE in allure-results/*.*
 do
+    echo "Deleting" $FILE
     rm $FILE
 done
 
